@@ -1,1 +1,0 @@
-# AR-vid8cnn2
