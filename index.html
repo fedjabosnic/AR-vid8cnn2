@@ -8,17 +8,18 @@
                 init: function () {
                     var marker = this.el;
                     this.vid = document.querySelector("#vid");
-
-                    marker.addEventListener('markerFound', function () {
-                        this.toggle = true;
-                        this.vid.play();
-                    }.bind(this));
-
-                    marker.addEventListener('markerLost', function () {
+                },
+                tick: function() {
+                    if (this.el.object3D.visible == true) {
+                        if (!this.toggle) {
+                            this.toggle = true;
+                            this.vid.play();
+                        }
+                    } else {
                         this.toggle = false;
                         this.vid.pause();
-                    }.bind(this));
-                },
+                    }
+                }
             });
         </script>
     </head>
