@@ -90,15 +90,18 @@
                 ></video>
             </a-assets>
 
-            <a-nft
-                type="nft"
-                url="AR-vid8cnn2/assets/marker"
+            <a-marker
+                type="pattern"
+                preset="custom"
+                url="assets/marker.patt"
+                videohandler
                 smooth="true"
                 smoothCount="10"
-                smoothTolerance=".01"
+                smoothTolerance="0.01"
                 smoothThreshold="5"
+                raycaster="objects: .clickable"
                 emitevents="true"
-                videohandler
+                cursor="fuse: false; rayOrigin: mouse;"
                 id="a-nft"
             >
                 <a-video
@@ -109,7 +112,7 @@
                     rotation="0 0 0"
                 ></a-video>
                 <a-text value="V-002" align="center" position="0 0.5 0" rotation="-90 0 0" side="double"></a-text>
-            </a-nft>
+            </a-marker>
 
             <a-entity camera></a-entity>
         </a-scene>
