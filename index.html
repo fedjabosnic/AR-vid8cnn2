@@ -91,7 +91,7 @@
                 ></video>
             </a-assets>
 
-            <a-marker
+            <!--<a-marker
                 type="pattern"
                 preset="custom"
                 url="assets/marker.patt"
@@ -113,7 +113,29 @@
                     rotation="-90 0 0"
                 ></a-video>
                 <a-text value="V-006" align="center" position="0 0.5 0" rotation="-90 0 0" side="double"></a-text>
-            </a-marker>
+            </a-marker>-->
+            
+            <a-nft
+                type="nft"
+                url="AR-vid8cnn2/assets/marker"
+                smooth="true"
+                smoothCount="10"
+                smoothTolerance=".01"
+                smoothThreshold="5"
+                emitevents="true"
+                videohandler
+                id="a-nft"
+            >
+                <a-box position='100 0.5 -180' material='opacity: 0.5; side: double' scale="100 100 100"></a-box>
+                <a-video
+                    id="a-vid"
+                    src="#vid"
+                    scale="100 100 0"
+                    position="0 0 0"
+                    rotation="-90 0 0"
+                ></a-video>
+                <a-text value="V-006" align="center" position="0 0.5 0" rotation="-90 0 0" side="double"></a-text>
+            </a-nft>
 
             <a-entity camera></a-entity>
         </a-scene>
