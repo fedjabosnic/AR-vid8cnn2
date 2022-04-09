@@ -8,18 +8,16 @@
                 init: function () {
                     var marker = this.el;
                     this.vid = document.querySelector("#vid");
-                },
-                tick: function() {
-                    if (this.el.object3D.visible == true) {
-                        if (!this.toggle) {
-                            this.toggle = true;
-                            this.vid.play();
-                        }
-                    } else {
+
+                    marker.addEventListener('markerFound', function () {
+                        this.toggle = true;
+                        this.vid.play();
+                    }.bind(this));
+
+                    marker.addEventListener('markerLost', function () {
                         this.toggle = false;
                         this.vid.pause();
-                    }
-                }
+                    }.bind(this));
             });
         </script>
     </head>
@@ -28,7 +26,7 @@
         <a-scene
             vr-mode-ui="enabled: false"
             loading-screen="enabled: false;"
-            arjs='sourceType: webcam; debugUIEnabled: false;'
+            arjs='sourceType: webcam; debugUIEnabled: true;'
             id="scene"
             embedded
         >
