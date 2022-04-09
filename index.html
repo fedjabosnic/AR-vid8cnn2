@@ -1,8 +1,8 @@
 <!doctype html>
 <html>
     <head>
-        <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
-        <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+        <script src="https://aframe.io/releases/1.1.0/aframe.min.js"></script>
+        <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
         <script>
             AFRAME.registerComponent('videohandler', {
                 init: function () {
@@ -45,19 +45,15 @@
                 ></video>
             </a-assets>
 
-            <a-marker
-                type="pattern"
-                preset="custom"
-                url="assets/marker.patt"
-                videohandler
+            <a-nft
+                type="nft"
+                url="AR-vid8cnn2/assets/marker"
                 smooth="true"
                 smoothCount="10"
-                smoothTolerance="0.01"
+                smoothTolerance=".01"
                 smoothThreshold="5"
-                raycaster="objects: .clickable"
                 emitevents="true"
-                cursor="fuse: false; rayOrigin: mouse;"
-                id="markerA"
+                   videohandler
             >
                 <a-video
                     src="#vid"
