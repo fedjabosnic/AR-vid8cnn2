@@ -25,6 +25,8 @@
                     this.markerDistance()
                 },
                 markerDistance: function () {
+                    console.log("tick")
+                    
                     var marker1Pos, marker2Pos
 
                     var marker1 = document.querySelector("#a-vid")
@@ -32,9 +34,11 @@
 
                     marker1Pos = new THREE.Vector3();
                     marker1.object3D.getWorldPosition(marker1Pos);
+                    console.log(marker1Pos)
 
                     marker2Pos = new THREE.Vector3();
                     marker2.object3D.getWorldPosition(marker2Pos);
+                    console.log(marker2Pos)
 
                     //distance
                     this.d = marker1Pos.distanceTo(marker2Pos);
