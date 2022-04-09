@@ -27,8 +27,8 @@
                 markerDistance: function () {
                     var marker1Pos, marker2Pos
 
-                    var marker1 = document.querySelector("#letraU")
-                    var marker2 = document.querySelector("#letraR")
+                    var marker1 = document.querySelector("#a-vid")
+                    var marker2 = document.querySelector("#a-nft")
 
                     marker1Pos = new THREE.Vector3();
                     marker1.object3D.getWorldPosition(marker1Pos);
@@ -76,8 +76,10 @@
                 smoothThreshold="5"
                 emitevents="true"
                 videohandler
+                id="a-nft"
             >
                 <a-video
+                    id="a-vid"
                     src="#vid"
                     scale="5 5 5"
                     position="0 0 0"
