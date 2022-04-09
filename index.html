@@ -25,7 +25,7 @@
     <body style="margin: 0; overflow: hidden;">
         <a-scene
             vr-mode-ui="enabled: false"
-            loading-screen="enabled: false;"
+            loading-screen="enabled: true;"
             arjs='trackingMethod: best; sourceType: webcam; debugUIEnabled: true;'
             id="scene"
             embedded
@@ -51,9 +51,9 @@
                 url="assets/marker.patt"
                 videohandler
                 smooth="true"
-                smoothCount="5"
+                smoothCount="10"
                 smoothTolerance="0.01"
-                smoothThreshold="2"
+                smoothThreshold="5"
                 raycaster="objects: .clickable"
                 emitevents="true"
                 cursor="fuse: false; rayOrigin: mouse;"
@@ -64,9 +64,8 @@
                     scale="2 2 1"
                     position="0 0 0"
                     rotation="90 0 0"
-                    class="clickable"
                 ></a-video>
-                <a-text value="test" align="center" position="0 0.5 0" rotation="-90 0 0" side="double"></a-text>
+                <a-text value="V-001" align="center" position="0 0.5 0" rotation="-90 0 0" side="double"></a-text>
             </a-marker>
 
             <a-entity camera look-controls="enabled: false"></a-entity>
